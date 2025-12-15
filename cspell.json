@@ -30,7 +30,44 @@
     "openapi",
     "pagerduty",
     "mmdc",
-    "cspell"
+    "cspell",
+    "fintech",
+    "devops",
+    "ci",
+    "cd",
+    "cicd",
+    "api",
+    "ui",
+    "e2e",
+    "rest",
+    "json",
+    "yaml",
+    "yml",
+    "markdownlint",
+    "lychee",
+    "codeowners",
+    "pullrequest",
+    "pr",
+    "adr",
+    "adrs",
+    "repo",
+    "repos",
+    "github",
+    "gitlab",
+    "jenkins",
+    "artifacts",
+    "workflows",
+    "testng",
+    "selenium",
+    "restassured",
+    "jmeter",
+    "taurus",
+    "cucumber",
+    "allure",
+    "maven",
+    "gherkin",
+    "testops",
+    "swap2you"
   ],
   "ignoreWords": [
     "yourorg",
@@ -45,6 +82,15 @@
     "*.lock",
     "package-lock.json",
     "yarn.lock"
+  ],
+  "ignoreRegExpList": [
+    "/`[^`]+`/g",
+    "/https?:\\/\\/[^\\s]+/g",
+    "/@[a-zA-Z0-9_-]+/g",
+    "/#[0-9]+/g"
+  ],
+  "enabledLanguageIds": [
+    "markdown"
   ]
 }
 
