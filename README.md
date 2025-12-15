@@ -1,5 +1,7 @@
 # Quality Engineering Platform Reference Architecture
 
+[![Documentation Quality](https://github.com/swap2you/qe-platform-reference-architecture/workflows/Docs%20Quality/badge.svg)](https://github.com/swap2you/qe-platform-reference-architecture/actions) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 > **A production-ready reference architecture for Quality Engineering platforms, designed for Principal and Director-level QE leaders.**
 
 ## What This Repository Is

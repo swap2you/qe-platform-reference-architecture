@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Fixed markdownlint failures in issue templates (MD022, MD032, MD012)
+- Fixed GitHub Actions workflow YAML indentation and structure
+- Added mermaid-check and spell-check jobs (non-blocking)
+- Improved Mermaid validation to extract blocks to temp files for reliable checking
+- Added workflow badges to README (CI status and MIT license)
+
 ### Added
 - Platform improvements and enhancements
 
