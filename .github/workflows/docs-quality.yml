@@ -22,6 +22,7 @@ jobs:
         with:
           globs: |
             **/*.md
+          configFile: ".markdownlint.json"
 
   link-check:
     name: Link check
@@ -107,7 +108,6 @@ jobs:
   spell-check:
     name: Spell check
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -135,4 +135,12 @@ jobs:
           echo "| Mermaid Check | ${{ needs.mermaid-check.result }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Spell Check | ${{ needs.spell-check.result }} |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "✅ All quality checks completed." >> $GITHUB_STEP_SUMMARY
+          
+          if [[ "${{ needs.markdown-lint.result }}" != "success" ]] || \
+             [[ "${{ needs.link-check.result }}" != "success" ]] || \
+             [[ "${{ needs.spell-check.result }}" != "success" ]]; then
+            echo "❌ Documentation quality checks failed. Please fix the issues above." >> $GITHUB_STEP_SUMMARY
+            exit 1
+          else
+            echo "✅ All quality checks passed." >> $GITHUB_STEP_SUMMARY
+          fi
