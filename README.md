@@ -64,6 +64,27 @@ The QE platform encompasses:
 5. **Enforce** standards from [`docs/05-test-strategy-standards.md`](docs/05-test-strategy-standards.md)
 6. **Onboard teams** using [`docs/09-onboarding-playbook.md`](docs/09-onboarding-playbook.md)
 
+## How to Use This Repo (10 Minutes)
+
+Follow this step-by-step navigation to get the most value from this reference architecture:
+
+1. **Start at** [`docs/index.md`](docs/index.md) - Get oriented with the documentation structure
+2. **Read** [`docs/01-platform-overview.md`](docs/01-platform-overview.md) - Understand the platform architecture and components
+3. **Review** [`docs/03-quality-gates.md`](docs/03-quality-gates.md) - Learn about CI/CD quality gate definitions and implementation
+4. **Review** [`docs/04-release-workflows.md`](docs/04-release-workflows.md) - Understand release readiness workflows and decision flows
+5. **Review** [`docs/09-onboarding-playbook.md`](docs/09-onboarding-playbook.md) - Use the 2-hour adoption plan for team onboarding
+
+## What to Build Next
+
+This reference architecture is the foundation. Next, implement these repositories:
+
+- **quality-gates-ci-pipeline** - CI/CD pipeline implementing the quality gates defined here
+- **ui-fintech-automation-platform** - UI test automation using Selenium + Cucumber + TestNG
+- **api-testing-platform-restassured** - API testing platform using RestAssured
+- **performance-testing-platform-jmeter-taurus** - Performance testing using JMeter/Taurus
+
+Each repository will reference this architecture and implement the standards, quality gates, and workflows defined here.
+
 ## How Other Repositories Plug In
 
 This reference architecture defines the **contract** that your actual test automation repositories must follow:
@@ -132,7 +153,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For security concerns, please see [`SECURITY.md`](SECURITY.md).
 
+## Repo Quality Checklist
+
+- ✅ CI checks passing (markdown lint + link check)
+- ✅ No placeholder dates
+- ✅ Public-safe content
+- ✅ Diagrams render in GitHub
+
 ---
 
-**Status**: Active reference architecture | **Last Updated**: 2024 | **Maintainer**: QE Platform Team
+**Status**: Active reference architecture | **Last Updated**: 2025-12-14 | **Maintainer**: QE Platform Team
 
