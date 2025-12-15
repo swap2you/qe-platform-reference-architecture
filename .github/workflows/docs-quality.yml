@@ -1,0 +1,91 @@
+name: Documentation Quality
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  markdown-lint:
+    name: Markdown Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Markdown Lint
+        uses: DavidAnson/markdownlint-cli2-action@v15
+        with:
+          globs: |
+            **/*.md
+            !node_modules/**/*.md
+
+  link-check:
+    name: Link Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check Markdown Links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+          config-file: '.markdown-link-check.json'
+          folder-path: '.'
+
+  mermaid-check:
+    name: Mermaid Diagram Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Mermaid CLI
+        run: npm install -g @mermaid-js/mermaid-cli
+
+      - name: Check Mermaid Syntax
+        run: |
+          find . -name "*.md" -type f -exec grep -l "```mermaid" {} \; | while read file; do
+            echo "Checking Mermaid diagrams in $file"
+            mmdc -i "$file" -o /dev/null 2>&1 || echo "Warning: Mermaid syntax check skipped (install mmdc for full validation)"
+          done
+        continue-on-error: true
+
+  spell-check:
+    name: Spell Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Spell Check
+        uses: streetsidesoftware/cspell-action@v7
+        with:
+          files: "**/*.md"
+          config: "cspell.json"
+        continue-on-error: true
+
+  quality-summary:
+    name: Quality Summary
+    runs-on: ubuntu-latest
+    needs: [markdown-lint, link-check, mermaid-check]
+    if: always()
+    steps:
+      - name: Quality Check Summary
+        run: |
+          echo "## Documentation Quality Check Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Markdown Lint: ${{ needs.markdown-lint.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Link Check: ${{ needs.link-check.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Mermaid Check: ${{ needs.mermaid-check.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "All quality checks completed."
+

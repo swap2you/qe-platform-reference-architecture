@@ -1,0 +1,50 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "Allure",
+    "Cucumber",
+    "RestAssured",
+    "TestNG",
+    "Selenium",
+    "JMeter",
+    "Taurus",
+    "Maven",
+    "mermaid",
+    "qa",
+    "qe",
+    "testops",
+    "pom",
+    "gherkin",
+    "subgraph",
+    "req",
+    "p95",
+    "p99",
+    "p50",
+    "slack",
+    "jira",
+    "grafana",
+    "prometheus",
+    "influxdb",
+    "swagger",
+    "openapi",
+    "pagerduty",
+    "mmdc",
+    "cspell"
+  ],
+  "ignoreWords": [
+    "yourorg",
+    "your-org",
+    "example.com",
+    "your-service"
+  ],
+  "flagWords": [],
+  "ignorePaths": [
+    "node_modules/**",
+    ".git/**",
+    "*.lock",
+    "package-lock.json",
+    "yarn.lock"
+  ]
+}
+

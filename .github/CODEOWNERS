@@ -1,0 +1,35 @@
+# CODEOWNERS file for QE Platform Reference Architecture
+# This file defines code owners who are automatically requested for review on PRs
+
+# Global owners - all files
+* @qe-platform-team
+
+# Documentation files
+/docs/ @qe-platform-team @qe-architects
+
+# GitHub workflows and templates
+/.github/ @qe-platform-team
+
+# Root level files
+/README.md @qe-platform-team @qe-leads
+/LICENSE @qe-platform-team
+/CHANGELOG.md @qe-platform-team
+/CONTRIBUTING.md @qe-platform-team
+/CODE_OF_CONDUCT.md @qe-platform-team
+/SECURITY.md @qe-platform-team @security-team
+
+# Specific documentation sections
+/docs/01-platform-overview.md @qe-platform-team @qe-architects
+/docs/02-repo-ecosystem-map.md @qe-platform-team @qe-architects
+/docs/03-quality-gates.md @qe-platform-team @qe-leads
+/docs/04-release-workflows.md @qe-platform-team @qe-leads @release-managers
+/docs/05-test-strategy-standards.md @qe-platform-team @qe-architects
+/docs/06-flaky-tests-policy.md @qe-platform-team @qe-engineers
+/docs/07-reporting-and-evidence.md @qe-platform-team @qe-engineers
+/docs/08-observability.md @qe-platform-team @devops-team
+/docs/09-onboarding-playbook.md @qe-platform-team @qe-leads
+/docs/10-ai-assisted-qe.md @qe-platform-team @qe-architects
+
+# Diagrams
+/docs/diagrams/ @qe-platform-team @qe-architects
+
