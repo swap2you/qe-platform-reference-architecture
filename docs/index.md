@@ -34,6 +34,18 @@ Welcome to the QE Platform Reference Architecture documentation. This index prov
 
 - **[AI-Assisted QE](10-ai-assisted-qe.md)** - Practical AI use cases for quality engineering
 
+## Compliance & Audit
+
+- **[Platform Contract Compliance](11-platform-contract-compliance.md)** - Compliance checklist for implementing repositories
+- **[Repository Audit Guide](12-repo-audit-guide.md)** - Step-by-step audit procedure
+
+## Architecture Decision Records
+
+- **[ADRs](adr/README.md)** - Architecture Decision Records documenting key decisions
+  - [ADR-0001: Documentation-First Reference Architecture](adr/0001-doc-first-reference-architecture.md)
+  - [ADR-0002: Quality Gates Separation](adr/0002-quality-gates-separation.md)
+  - [ADR-0003: Reporting and Evidence Standard](adr/0003-reporting-and-evidence-standard.md)
+
 ## Reference
 
 - **[Mermaid Diagrams](diagrams/mermaid-snippets.md)** - Reusable diagram snippets
@@ -54,6 +66,13 @@ docs/
 ├── 08-observability.md              # Quality observability
 ├── 09-onboarding-playbook.md        # Team onboarding
 ├── 10-ai-assisted-qe.md             # AI use cases
+├── 11-platform-contract-compliance.md # Compliance checklist
+├── 12-repo-audit-guide.md           # Audit procedure
+├── adr/                              # Architecture Decision Records
+│   ├── README.md
+│   ├── 0001-doc-first-reference-architecture.md
+│   ├── 0002-quality-gates-separation.md
+│   └── 0003-reporting-and-evidence-standard.md
 ├── diagrams/
 │   └── mermaid-snippets.md          # Diagram library
 └── issues-backlog.md                # Improvement backlog

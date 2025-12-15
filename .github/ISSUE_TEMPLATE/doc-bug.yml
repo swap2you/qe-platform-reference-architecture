@@ -1,0 +1,49 @@
+---
+name: Documentation Bug
+about: Report a bug or issue in the documentation
+title: '[DOC-BUG] '
+labels: bug, documentation
+assignees: '@swap2you'
+
+---
+
+## Description
+
+A clear and concise description of what the bug is.
+
+## Location
+
+**File**: `path/to/file.md`
+
+**Section**: Section name or heading
+
+## Current Behavior
+
+What currently happens or what is incorrect.
+
+## Expected Behavior
+
+What should happen or what should be correct.
+
+## Impact
+
+- [ ] Low - Minor typo or formatting issue
+- [ ] Medium - Confusing or unclear content
+- [ ] High - Incorrect information that could mislead implementers
+
+## Screenshots
+
+If applicable, add screenshots to help explain the problem.
+
+## Proposed Fix
+
+If you have a suggestion for how to fix this, please describe it here.
+
+---
+
+**Checklist**:
+
+- [ ] I have searched existing issues to ensure this is not a duplicate
+- [ ] I have provided clear description of the issue
+- [ ] I have specified the file and section where the issue occurs
+

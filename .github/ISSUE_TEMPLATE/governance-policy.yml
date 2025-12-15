@@ -1,0 +1,60 @@
+---
+name: Governance Policy Change
+about: Propose a change to governance policies or standards
+title: '[GOVERNANCE] '
+labels: governance, policy
+assignees: '@swap2you'
+
+---
+
+## Policy Area
+
+Which governance area does this affect?
+
+- [ ] Branch strategy
+- [ ] PR requirements
+- [ ] CODEOWNERS usage
+- [ ] Compliance enforcement
+- [ ] Audit procedures
+- [ ] Other (specify)
+
+## Current Policy
+
+What is the current policy? (Reference relevant documentation)
+
+## Proposed Change
+
+What change are you proposing?
+
+## Motivation
+
+Why is this change needed? What problem does it solve?
+
+## Impact
+
+### Affected Processes
+
+Which processes will be affected?
+
+- [ ] Repository setup
+- [ ] PR workflow
+- [ ] Compliance verification
+- [ ] Audit procedures
+- [ ] Other (specify)
+
+### Implementation Requirements
+
+What needs to be done to implement this change?
+
+1. Step 1
+2. Step 2
+3. Step 3
+
+## Alternatives Considered
+
+What alternatives did you consider? Why was this approach chosen?
+
+## References
+
+Link to relevant documentation or discussions.
+

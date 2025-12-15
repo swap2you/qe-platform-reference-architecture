@@ -1,0 +1,62 @@
+---
+name: Contract Change Request
+about: Propose a change to the QE Platform Contract
+title: '[CONTRACT] '
+labels: contract, governance
+assignees: '@swap2you'
+
+---
+
+## Contract Section
+
+Which section of [CONTRACT.md](../../CONTRACT.md) does this affect?
+
+- [ ] Section 1: Repository Folder Structure
+- [ ] Section 2: Required CI/CD Quality Gates
+- [ ] Section 3: Required Tagging Taxonomy
+- [ ] Section 4: Required Reporting Standard
+- [ ] Section 5: Required Documentation Set
+- [ ] Section 6: Required Governance
+- [ ] Other (specify)
+
+## Change Description
+
+What change are you proposing?
+
+## Motivation
+
+Why is this change needed? What problem does it solve?
+
+## Impact Analysis
+
+### Affected Repositories
+
+Which implementing repositories will be affected?
+
+- [ ] UI test repositories
+- [ ] API test repositories
+- [ ] Performance test repositories
+- [ ] All repositories
+- [ ] Other (specify)
+
+### Breaking Changes
+
+- [ ] This is a breaking change (requires updates to implementing repos)
+- [ ] This is a non-breaking change (additive only)
+
+### Rollout Plan
+
+How will this change be rolled out?
+
+1. Step 1
+2. Step 2
+3. Step 3
+
+## Alternatives Considered
+
+What alternatives did you consider? Why was this approach chosen?
+
+## References
+
+Link to relevant documentation or discussions.
+

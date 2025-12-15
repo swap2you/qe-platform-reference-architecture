@@ -87,6 +87,88 @@ This reference architecture is the foundation. Next, implement these repositorie
 
 Each repository will reference this architecture and implement the standards, quality gates, and workflows defined here.
 
+## Platform Contract (TL;DR)
+
+This repository defines a **strict, enforceable contract** that all implementing repositories MUST follow.
+
+**Quick Links**:
+- [`CONTRACT.md`](CONTRACT.md) - Full contract definition (REQUIRED reading)
+- [`docs/11-platform-contract-compliance.md`](docs/11-platform-contract-compliance.md) - Compliance checklist
+- [`docs/12-repo-audit-guide.md`](docs/12-repo-audit-guide.md) - Audit procedure
+
+**Contract Requirements**:
+- ✅ Required folder structure
+- ✅ Required CI gates (PR smoke tests, nightly regression)
+- ✅ Required tagging taxonomy
+- ✅ Required Allure evidence bundles
+- ✅ Required documentation set
+- ✅ Required governance (branching, PR templates, CODEOWNERS)
+
+**Non-compliance blocks production releases.**
+
+## How to Implement This in Another Repo
+
+Follow these steps to implement the QE Platform Contract in your repository:
+
+### Step 1: Review the Contract
+
+1. Read [`CONTRACT.md`](CONTRACT.md) - Understand all requirements
+2. Review [`docs/11-platform-contract-compliance.md`](docs/11-platform-contract-compliance.md) - Use as checklist
+3. Review [`docs/12-repo-audit-guide.md`](docs/12-repo-audit-guide.md) - Understand audit process
+
+### Step 2: Set Up Repository Structure
+
+1. Create required folder structure (see [`CONTRACT.md`](CONTRACT.md) Section 1)
+2. Set up `.github/` folder with workflows
+3. Create `docs/` folder with required documentation
+
+### Step 3: Implement CI/CD Quality Gates
+
+1. Create `.github/workflows/smoke-tests.yml` - PR gate (see [`CONTRACT.md`](CONTRACT.md) Section 2.1)
+2. Create `.github/workflows/regression-tests.yml` - Nightly gate (see [`CONTRACT.md`](CONTRACT.md) Section 2.2)
+3. Configure artifact retention (see [`CONTRACT.md`](CONTRACT.md) Section 2.3)
+
+### Step 4: Implement Tagging Taxonomy
+
+1. Tag all tests with test type (`@smoke`, `@regression`) - see [`CONTRACT.md`](CONTRACT.md) Section 3
+2. Tag tests by feature/component
+3. Tag critical tests with priority
+
+### Step 5: Set Up Reporting
+
+1. Configure Allure report generation - see [`CONTRACT.md`](CONTRACT.md) Section 4
+2. Ensure Allure evidence bundles include required artifacts
+3. Set up artifact retention policies
+
+### Step 6: Create Required Documentation
+
+1. Update `README.md` with required sections - see [`CONTRACT.md`](CONTRACT.md) Section 5.1
+2. Create `docs/test-strategy.md` - see [`CONTRACT.md`](CONTRACT.md) Section 5.2
+3. Create `docs/reporting-guide.md` - see [`CONTRACT.md`](CONTRACT.md) Section 5.2
+
+### Step 7: Implement Governance
+
+1. Set up branch protection - see [`CONTRACT.md`](CONTRACT.md) Section 6.1
+2. Create PR template - see [`CONTRACT.md`](CONTRACT.md) Section 6.2
+3. Configure CODEOWNERS - see [`CONTRACT.md`](CONTRACT.md) Section 6.3
+
+### Step 8: Verify Compliance
+
+1. Use [`docs/11-platform-contract-compliance.md`](docs/11-platform-contract-compliance.md) checklist
+2. Run audit using [`docs/12-repo-audit-guide.md`](docs/12-repo-audit-guide.md)
+3. Fix any compliance gaps
+
+### Step 9: Reference This Contract
+
+Add to your repository `README.md`:
+```markdown
+## Platform Contract Compliance
+
+This repository implements the [QE Platform Reference Architecture](https://github.com/swap2you/qe-platform-reference-architecture) contract.
+
+See [CONTRACT.md](https://github.com/swap2you/qe-platform-reference-architecture/blob/main/CONTRACT.md) for requirements.
+```
+
 ## How Other Repositories Plug In
 
 This reference architecture defines the **contract** that your actual test automation repositories must follow:
@@ -122,6 +204,7 @@ See [`docs/02-repo-ecosystem-map.md`](docs/02-repo-ecosystem-map.md) for detaile
 ## Documentation Index
 
 - [`docs/index.md`](docs/index.md) - Complete documentation index
+- [`CONTRACT.md`](CONTRACT.md) - **Platform Contract (REQUIRED for implementers)**
 - [`docs/01-platform-overview.md`](docs/01-platform-overview.md) - Platform architecture overview
 - [`docs/02-repo-ecosystem-map.md`](docs/02-repo-ecosystem-map.md) - Repository relationships and integration
 - [`docs/03-quality-gates.md`](docs/03-quality-gates.md) - CI/CD quality gate definitions
@@ -132,6 +215,9 @@ See [`docs/02-repo-ecosystem-map.md`](docs/02-repo-ecosystem-map.md) for detaile
 - [`docs/08-observability.md`](docs/08-observability.md) - Quality observability
 - [`docs/09-onboarding-playbook.md`](docs/09-onboarding-playbook.md) - Team onboarding guide
 - [`docs/10-ai-assisted-qe.md`](docs/10-ai-assisted-qe.md) - AI-assisted QE use cases
+- [`docs/11-platform-contract-compliance.md`](docs/11-platform-contract-compliance.md) - Compliance checklist
+- [`docs/12-repo-audit-guide.md`](docs/12-repo-audit-guide.md) - Repository audit procedure
+- [`docs/adr/README.md`](docs/adr/README.md) - Architecture Decision Records
 
 ## Issues Backlog
 

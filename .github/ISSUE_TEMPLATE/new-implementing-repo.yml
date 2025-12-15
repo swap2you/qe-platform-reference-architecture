@@ -1,0 +1,50 @@
+---
+name: New Implementing Repository
+about: Register a new repository implementing the QE Platform Contract
+title: '[NEW-REPO] '
+labels: compliance, repository
+assignees: '@swap2you'
+
+---
+
+## Repository Information
+
+- **Repository Name**: 
+- **Repository URL**: 
+- **Repository Type**: 
+  - [ ] UI test automation
+  - [ ] API test automation
+  - [ ] Performance test automation
+  - [ ] Other (specify)
+
+## Implementation Status
+
+### Contract Compliance
+
+- [ ] Repository structure matches contract requirements
+- [ ] PR gate (smoke tests) implemented
+- [ ] Nightly gate (regression tests) implemented
+- [ ] Tagging taxonomy implemented
+- [ ] Allure reporting configured
+- [ ] Required documentation created
+- [ ] Governance standards implemented
+
+### Compliance Checklist
+
+Use [docs/11-platform-contract-compliance.md](../../docs/11-platform-contract-compliance.md) to verify compliance.
+
+## Implementation Timeline
+
+- **Start Date**: 
+- **Target Completion Date**: 
+- **Current Status**: 
+
+## Questions or Blockers
+
+List any questions or blockers preventing full compliance.
+
+## Contact
+
+- **Repository Owner**: 
+- **Team Lead**: 
+
