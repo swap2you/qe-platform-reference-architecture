@@ -13,12 +13,14 @@ Quality gates are automated checkpoints in the CI/CD pipeline that prevent low-q
 **When**: Runs on every Pull Request
 
 **Scope**:
+
 - Critical user journeys (3-5 scenarios)
 - Authentication flows
 - Core business logic
 - API health checks
 
 **Success Criteria**:
+
 - All smoke tests must pass
 - Execution time < 10 minutes
 - No blocking defects
@@ -40,12 +42,14 @@ graph LR
 **When**: Runs on merge to main branch and before release
 
 **Scope**:
+
 - Full test suite (UI, API, integration)
 - Cross-browser testing (for UI)
 - Data validation tests
 - Error handling tests
 
 **Success Criteria**:
+
 - All regression tests must pass
 - Test coverage > 80%
 - No critical or high-severity defects
@@ -68,12 +72,14 @@ graph TB
 **When**: Runs on release branch creation
 
 **Scope**:
+
 - Response time benchmarks
 - Throughput requirements
 - Resource utilization
 - Load test scenarios
 
 **Success Criteria**:
+
 - Response times within SLA
 - Throughput meets requirements
 - No performance regressions
@@ -96,12 +102,14 @@ graph TB
 **When**: Runs on release branch creation
 
 **Scope**:
+
 - Dependency vulnerability scan
 - OWASP Top 10 checks
 - API security basics
 - Secrets detection
 
 **Success Criteria**:
+
 - No critical vulnerabilities
 - No high-severity vulnerabilities (configurable)
 - Dependencies up to date
@@ -230,6 +238,7 @@ Quality gates should be enforced strictly, but exceptions may be granted for:
 3. **Infrastructure Issues**: Temporary gate bypass with post-deployment validation
 
 All exceptions must be:
+
 - Documented in the release notes
 - Approved by QE lead
 - Tracked in issue management system
@@ -270,4 +279,3 @@ All exceptions must be:
 - Review [Release Workflows](04-release-workflows.md) for gate integration
 - See [Test Strategy Standards](05-test-strategy-standards.md) for test tagging
 - Check [Reporting and Evidence](07-reporting-and-evidence.md) for report requirements
-

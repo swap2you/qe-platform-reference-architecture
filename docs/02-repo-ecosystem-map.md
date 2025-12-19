@@ -61,6 +61,7 @@ graph TB
 **Purpose**: Define standards, workflows, and governance
 
 **Contains**:
+
 - Quality gate definitions
 - Test strategy standards
 - Governance policies
@@ -68,6 +69,7 @@ graph TB
 - Onboarding guides
 
 **Does NOT contain**:
+
 - Actual test code
 - Application-specific configurations
 - Proprietary information
@@ -77,16 +79,19 @@ graph TB
 **Purpose**: End-to-end UI testing
 
 **Implements**:
+
 - Selenium WebDriver tests
 - Cucumber BDD scenarios
 - TestNG test execution
 - Page Object Model pattern
 
 **References**:
+
 - This repository for standards
 - Application repositories for test targets
 
 **Generates**:
+
 - Allure reports with screenshots
 - Test execution artifacts
 
@@ -95,16 +100,19 @@ graph TB
 **Purpose**: API contract and integration testing
 
 **Implements**:
+
 - RestAssured API tests
 - Contract testing
 - API performance tests
 - Schema validation
 
 **References**:
+
 - This repository for standards
 - API documentation (OpenAPI/Swagger)
 
 **Generates**:
+
 - Allure reports with request/response logs
 - API test execution artifacts
 
@@ -113,16 +121,19 @@ graph TB
 **Purpose**: Load, stress, and performance testing
 
 **Implements**:
+
 - JMeter test plans
 - Taurus configurations
 - Performance benchmarks
 - Load scenarios
 
 **References**:
+
 - This repository for standards
 - Performance requirements
 
 **Generates**:
+
 - Performance test reports
 - Performance trend data
 
@@ -209,7 +220,7 @@ All repositories follow a consistent naming pattern:
 
 Each test automation repository should align with this reference architecture:
 
-```
+```text
 test-automation-repo/
 ├── README.md                    # References this architecture
 ├── .github/
@@ -276,4 +287,3 @@ graph TB
 - Review [Quality Gates](03-quality-gates.md) to understand integration points
 - See [Test Strategy Standards](05-test-strategy-standards.md) for implementation details
 - Check [Onboarding Playbook](09-onboarding-playbook.md) for repository setup
-

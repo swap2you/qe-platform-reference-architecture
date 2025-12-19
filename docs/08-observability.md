@@ -121,6 +121,7 @@ graph LR
 ### Performance Trends
 
 Track performance metrics over time to identify:
+
 - Performance degradation
 - Resource constraints
 - Optimization opportunities
@@ -150,16 +151,19 @@ graph TB
 ### Dashboard Metrics
 
 **Real-time Metrics**:
+
 - Current test execution status
 - Active quality gate status
 - Recent test results
 
 **Historical Metrics**:
+
 - Quality trends (last 30 days, 90 days, 1 year)
 - Performance trends
 - Release quality history
 
 **Comparative Metrics**:
+
 - Current vs. previous period
 - Team comparisons
 - Environment comparisons
@@ -297,16 +301,19 @@ Track the following trends:
 ## Observability Roadmap
 
 ### Phase 1: Basic Metrics
+
 - Test pass/fail rates
 - Execution times
 - Basic dashboards
 
 ### Phase 2: Advanced Metrics
+
 - Trend analysis
 - Predictive analytics
 - Advanced dashboards
 
 ### Phase 3: AI-Enhanced
+
 - Anomaly detection
 - Predictive quality
 - Automated insights
@@ -316,4 +323,3 @@ Track the following trends:
 - Review [Reporting and Evidence](07-reporting-and-evidence.md) for report metrics
 - See [Quality Gates](03-quality-gates.md) for gate metrics
 - Check [Flaky Tests Policy](06-flaky-tests-policy.md) for flaky test monitoring
-

@@ -52,12 +52,14 @@ graph TB
 ### Stage 1: Pre-Release Preparation
 
 **Activities**:
+
 - Create release branch from main
 - Update version numbers
 - Prepare release notes
 - Notify stakeholders
 
 **Quality Checks**:
+
 - Code review completed
 - Documentation updated
 - Dependencies updated
@@ -65,12 +67,14 @@ graph TB
 ### Stage 2: Regression Testing
 
 **Activities**:
+
 - Run full regression test suite
 - Execute cross-browser tests (UI)
 - Validate API contracts
 - Check integration points
 
 **Success Criteria**:
+
 - All regression tests pass
 - No critical or high-severity defects
 - Test execution completed successfully
@@ -80,12 +84,14 @@ graph TB
 ### Stage 3: Performance Validation
 
 **Activities**:
+
 - Execute performance test suite
 - Validate response time SLAs
 - Check throughput requirements
 - Monitor resource utilization
 
 **Success Criteria**:
+
 - All performance benchmarks met
 - No performance regressions
 - Resource usage within limits
@@ -95,12 +101,14 @@ graph TB
 ### Stage 4: Security Scanning
 
 **Activities**:
+
 - Run dependency vulnerability scan
 - Execute security-lite checks
 - Validate API security
 - Check for exposed secrets
 
 **Success Criteria**:
+
 - No critical vulnerabilities
 - No high-severity vulnerabilities (configurable)
 - Security best practices followed
@@ -110,12 +118,14 @@ graph TB
 ### Stage 5: Quality Metrics Review
 
 **Activities**:
+
 - Check flaky test rate
 - Validate test coverage
 - Review quality trends
 - Analyze test execution metrics
 
 **Success Criteria**:
+
 - Flaky test rate < 5%
 - Test coverage > 80%
 - Quality trends stable or improving
@@ -125,12 +135,14 @@ graph TB
 ### Stage 6: Release Evidence Generation
 
 **Activities**:
+
 - Generate Allure reports
 - Archive test artifacts
 - Create release readiness dashboard
 - Document test results
 
 **Deliverables**:
+
 - Allure test report
 - Performance test report
 - Security scan report
@@ -139,12 +151,14 @@ graph TB
 ### Stage 7: Release Review
 
 **Activities**:
+
 - Review all quality evidence
 - Discuss any exceptions
 - Make go/no-go decision
 - Document decision rationale
 
 **Participants**:
+
 - Release Manager
 - QE Lead
 - Engineering Lead
@@ -209,6 +223,7 @@ graph LR
 ```
 
 **Conditions for Emergency Release**:
+
 - Critical production issue
 - Approval from QE lead and release manager
 - Smoke tests must pass
@@ -239,11 +254,13 @@ Every release must include:
 ## Release Communication
 
 ### Pre-Release
+
 - Notify stakeholders of release branch creation
 - Share release timeline
 - Communicate quality gate status
 
 ### Post-Release
+
 - Share release notes
 - Communicate quality metrics
 - Report any post-deployment issues
@@ -272,4 +289,3 @@ After each release:
 - Review [Quality Gates](03-quality-gates.md) for gate definitions
 - See [Reporting and Evidence](07-reporting-and-evidence.md) for artifact requirements
 - Check [Test Strategy Standards](05-test-strategy-standards.md) for test execution standards
-
