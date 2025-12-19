@@ -2,526 +2,361 @@
 
 ## Overview
 
-This playbook guides new team members through the QE Platform Reference Architecture, ensuring they understand both the technical implementation and the quality philosophy that drives it.
+This playbook provides a structured 2-week onboarding program for new QE engineers joining the platform team. It combines hands-on exercises with real platform work to accelerate learning and contribution.
 
-## Learning Objectives
+## Week 1: Foundation & Local Development
 
-By completing this playbook, you will:
+### Day 1: Environment Setup & Platform Overview
 
-- Understand the platform's quality-first approach
-- Know how to implement quality gates in your projects
-- Be able to generate and interpret quality reports
-- Follow the platform's standards and best practices
-- Contribute effectively to platform improvements
+#### Morning: Welcome & Setup
+- Team introductions and role overview
+- Development environment setup
+  - Install required tools (Node.js, Docker, Git)
+  - Clone platform repositories
+  - Configure IDE and recommended extensions
+  - Set up access to required services (GitHub, Jenkins, Allure)
 
-## Prerequisites
+#### Afternoon: Platform Architecture
+- Review platform architecture documentation
+- Understand the test pyramid strategy
+- Overview of CI/CD pipeline
+- Introduction to the test framework structure
 
-Before starting, ensure you have:
+**Deliverable**: Successfully run local test suite
 
-- Access to the platform repository
-- Development environment set up (Node.js, npm/yarn)
-- Basic understanding of testing frameworks
-- GitHub account with appropriate permissions
+### Day 2: First Test Contribution
 
-## Week 1: Foundation & Philosophy
+#### Morning: Test Framework Deep Dive
+- Study existing test patterns
+- Review coding standards and best practices
+- Understand the Page Object Model implementation
+- Learn about test data management
 
-### Day 1-2: Platform Overview
+#### Afternoon: Write First Test
+- Pair programming session with a buddy
+- Create a simple UI test for an existing feature
+- Practice local test execution
+- Introduction to debugging techniques
 
-**Reading (2 hours)**
+**Deliverable**: Pull request with first test (with buddy review)
 
-- Read the [README](../README.md)
-- Review the [Architecture Decision Records](adr/README.md)
-- Understand the [Platform Contract](06-platform-contract.md)
+### Day 3: API Testing & Contract Testing
 
-**Exercise (1 hour)**
+#### Morning: API Testing Fundamentals
+- Review API testing framework
+- Understand REST API test patterns
+- Study authentication and authorization testing
+- Learn about test data setup for APIs
 
-- Clone the repository
-- Run `npm install`
-- Execute `npm test` and observe the output
-- Review the generated reports in `allure-report/`
+#### Afternoon: Contract Testing
+- Introduction to contract testing concepts
+- Review existing contract tests
+- Understand provider and consumer testing
+- Practice running contract tests locally
 
-**Checkpoint Questions**
+**Deliverable**: Create one API test and one contract test
 
-- What are the three main quality gates?
-- Why does the platform emphasize "doc-first" approach?
-- What happens when a quality gate fails?
+### Day 4: CI/CD Pipeline Integration
 
-### Day 3-4: Local Development Setup
+#### Morning: Jenkins Pipeline Overview
+- Understand the Jenkins pipeline structure
+- Review pipeline stages and their purposes
+- Learn about pipeline triggers and schedules
+- Study artifact management and test result publishing
 
-**Hands-on (4 hours)**
+#### Afternoon: Pipeline Troubleshooting
+- Learn how to debug pipeline failures
+- Practice accessing and analyzing Jenkins logs
+- Understand common pipeline issues and solutions
+- Review pipeline monitoring and notifications
+
+**Deliverable**: Document one pipeline troubleshooting scenario
+
+### Day 5: Test Reporting & Allure
+
+#### Morning: Allure Reporting
+- Navigate the Allure test report interface
+- Understand test categorization and tagging
+- Learn about test history and trends
+- Review failure analysis techniques
+
+#### Afternoon: Hands-on Practice
 
 - Create a test branch
+- Run tests locally and in CI
+- Analyze Allure report results
+- Practice identifying and categorizing failures
 
-```bash
-git checkout -b onboarding/your-name
-```
+**Deliverable**: Complete analysis report of a test run
 
-- Add a simple test file in `tests/examples/`
-- Run quality gates locally
-- Generate Allure report
-- Review all generated artifacts
+## Week 2: Advanced Topics & Real Work
 
-**Exercise Tasks**
+### Day 6: Performance Testing Basics
 
-1. Create a new test file: `tests/examples/onboarding-test.spec.js`
+#### Morning: Performance Testing Introduction
+- Overview of performance testing strategy
+- Review existing performance test suite
+- Understand key performance metrics
+- Learn about load testing tools and frameworks
 
-```javascript
-import { test, expect } from '@playwright/test';
+#### Afternoon: Create Performance Test
+- Write a simple load test
+- Execute performance tests locally
+- Analyze performance test results
+- Understand performance baselines and thresholds
 
-test.describe('Onboarding Exercise', () => {
-  test('should demonstrate basic assertions', async () => {
-    expect(1 + 1).toBe(2);
-  });
+**Deliverable**: One performance test with analysis
 
-  test('should show test metadata', async () => {
-    await test.step('Setup', async () => {
-      // Setup code
-    });
-    
-    await test.step('Execution', async () => {
-      expect(true).toBeTruthy();
-    });
-    
-    await test.step('Verification', async () => {
-      expect(false).toBeFalsy();
-    });
-  });
-});
-```
+### Day 7: Visual Testing & Accessibility
 
-2. Run the test and verify it passes
-3. Generate Allure report
-4. Find your test in the report
-5. Take a screenshot and share with your mentor
+#### Morning: Visual Regression Testing
+- Introduction to visual testing concepts
+- Review visual testing tools integration
+- Understand baseline management
+- Learn about visual diff analysis
 
-**Checkpoint**
+#### Afternoon: Accessibility Testing
+- Overview of accessibility standards (WCAG)
+- Review accessibility testing tools
+- Practice automated accessibility testing
+- Understand manual accessibility testing techniques
 
-- Can you run tests locally?
-- Do you understand the test structure?
-- Can you navigate the Allure report?
+**Deliverable**: Add visual and accessibility checks to an existing test
 
-### Day 5: Documentation Standards
+### Day 8: Test Data Management
 
-**Reading (2 hours)**
+#### Morning: Test Data Strategy
+- Understand test data requirements
+- Review test data generation approaches
+- Learn about test data cleanup strategies
+- Study database seeding and fixtures
 
-- Study the [Documentation Guide](03-documentation-guide.md)
-- Review existing ADRs for structure examples
-- Read about Mermaid diagrams
+#### Afternoon: Implement Test Data
+- Create test data builders
+- Implement data cleanup automation
+- Practice test isolation techniques
+- Review test data security considerations
 
-**Exercise (2 hours)**
+**Deliverable**: Refactor existing tests to use proper test data management
 
-Create a personal learning log document:
+### Day 9: Advanced Debugging & Troubleshooting
 
-```markdown
-# My QE Platform Learning Journey
+#### Morning: Debugging Techniques
+- Advanced debugging in the IDE
+- Using browser developer tools
+- Network traffic analysis
+- Screenshot and video capture for failures
 
-## Week 1: Foundation
+#### Afternoon: Flaky Test Investigation
+- Understanding flaky tests
+- Techniques for reproducing flaky failures
+- Common causes and solutions
+- Practice fixing a flaky test
 
-### What I Learned
-- Key concept 1
-- Key concept 2
+**Deliverable**: Fix one flaky test with documentation
 
-### Questions & Clarifications
-- Question 1
-- Question 2
+### Day 10: Real Project Work
 
-### Action Items
-- [ ] Item 1
-- [ ] Item 2
-```
+#### Full Day: Sprint Work
+- Join daily standup
+- Pick up a real story from the backlog
+- Work independently with buddy support available
+- Follow the team's standard workflow
 
-**Checkpoint**
+**Deliverable**: Progress on assigned story
 
-- Do you understand the documentation structure?
-- Can you create Mermaid diagrams?
-- Have you reviewed markdown best practices?
+## Week 3 and Beyond: Continued Growth
 
-## Week 2: Practical Implementation
+### Ongoing Activities
 
-### Day 6-7: Test Development
+#### Regular Practices
+- Participate in sprint ceremonies
+- Contribute to test automation backlog
+- Rotate on-call responsibilities (after 4 weeks)
+- Attend team knowledge-sharing sessions
 
-**Learning (2 hours)**
+#### Learning Path
+- Complete advanced training modules
+- Shadow experienced team members
+- Take on mentoring responsibilities for newer members
+- Contribute to platform documentation and tools
 
-- Review [Test Development Guide](04-test-development.md)
-- Study existing test examples
-- Understand test organization patterns
+## Exercises and Checkpoints
 
-**Exercise (4 hours)**
+### Exercise 1: End-to-End Test Creation
 
-Create a complete test suite:
+**Objective**: Create a complete end-to-end test from scratch
 
-1. Choose a simple API or web page
-2. Write at least 3 test cases covering:
-   - Happy path
-   - Error handling
-   - Edge cases
-3. Add proper test metadata (tags, descriptions)
-4. Include step-by-step reporting
-
-**Quality Criteria**
-
-- Tests must pass quality gates
-- Code must be documented
-- Allure report must show clear test steps
-- Tests must be tagged appropriately
-
-### Day 8-9: Quality Gates Deep Dive
-
-**Hands-on (4 hours)**
-
-1. Intentionally fail each quality gate:
-   - Test Execution Gate (write a failing test)
-   - Evidence Collection Gate (break report generation)
-   - Platform Compliance Gate (violate standards)
-
-2. Observe the failures
-3. Fix each issue
-4. Document what you learned
-
-**Exercise: Create Quality Gate Report**
-
-Document your findings:
-
-```markdown
-# Quality Gate Investigation
-
-## Test Execution Gate
-- How I broke it: ...
-- What happened: ...
-- How I fixed it: ...
-- Key learning: ...
-
-## Evidence Collection Gate
-- How I broke it: ...
-- What happened: ...
-- How I fixed it: ...
-- Key learning: ...
-
-## Platform Compliance Gate
-- How I broke it: ...
-- What happened: ...
-- How I fixed it: ...
-- Key learning: ...
-```
-
-### Day 10: CI/CD Integration
-
-**Learning (3 hours)**
-
-- Review `.github/workflows/` configurations
-- Understand the CI/CD pipeline
-- Study how quality gates run in CI
-
-**Exercise (2 hours)**
-
-1. Create a pull request with your onboarding work
-2. Watch the CI/CD pipeline execute
-3. Review the automated checks
-4. Address any failures
-5. Get your PR reviewed
-
-**Checkpoint**
-
-- Do you understand the CI/CD flow?
-- Can you interpret pipeline results?
-- Have you successfully created a PR?
-
-## Week 3: Advanced Topics & Real Work
-
-### Day 11-12: Reporting & Evidence
-
-**Deep Dive (4 hours)**
-
-- Study the [Reporting Guide](05-evidence-and-reporting.md)
-- Explore Allure features:
-  - Test steps
-  - Attachments
-  - Categories
-  - History
-  - Trends
-
-**Exercise: Enhanced Test Suite**
-
-Enhance your previous test suite with:
-
-1. Screenshot attachments
-2. Custom step reporting
-3. Test categorization
-4. Environment information
-5. Test data attachments
-
-**Example Enhancement**
-
-```javascript
-import { test } from '@playwright/test';
-import { allure } from 'allure-playwright';
-
-test('enhanced test with reporting', async ({ page }) => {
-  await allure.epic('Onboarding');
-  await allure.feature('Advanced Reporting');
-  await allure.story('Enhanced Evidence Collection');
-  
-  await test.step('Navigate and capture', async () => {
-    await page.goto('https://example.com');
-    const screenshot = await page.screenshot();
-    await allure.attachment('page-screenshot', screenshot, 'image/png');
-  });
-  
-  await test.step('Collect environment data', async () => {
-    const envData = {
-      url: page.url(),
-      timestamp: new Date().toISOString(),
-      viewport: page.viewportSize()
-    };
-    await allure.attachment('environment', JSON.stringify(envData, null, 2), 'application/json');
-  });
-});
-```
-
-### Day 13-14: Platform Compliance & Best Practices
-
-**Study (3 hours)**
-
-- Review [Platform Contract Compliance](11-platform-contract-compliance.md)
-- Study [Repository Audit Guide](12-repo-audit-guide.md)
-- Understand compliance requirements
-
-**Exercise: Compliance Audit**
+**Steps**:
 
 1. Create feature branch
+2. Identify a test scenario from requirements
+3. Design the test using Page Object Model
+4. Implement the test with proper assertions
+5. Add appropriate tags and documentation
+6. Run test locally and verify
+7. Create pull request
+8. Address review feedback
+9. Merge after approval
 
-```bash
-git checkout -b feature/compliance-exercise
-```
+**Success Criteria**:
+- Test passes consistently
+- Follows coding standards
+- Properly documented
+- CI pipeline passes
 
-2. Audit your onboarding work against platform contract
-3. Create a compliance checklist
-4. Fix any non-compliance issues
-5. Document your compliance status
+### Exercise 2: Test Report Analysis
 
-**Compliance Checklist Template**
+**Objective**: Analyze a failed test run and create an action plan
 
-```markdown
-# Platform Compliance Checklist
-
-## Quality Gates
-- [ ] All tests pass
-- [ ] Reports generated successfully
-- [ ] Platform standards followed
-
-## Documentation
-- [ ] Code is documented
-- [ ] Tests have descriptions
-- [ ] ADRs reviewed (if applicable)
-
-## Evidence Collection
-- [ ] Allure reports generated
-- [ ] Test artifacts preserved
-- [ ] Screenshots/attachments included
-
-## Best Practices
-- [ ] Code follows conventions
-- [ ] Tests are maintainable
-- [ ] No hardcoded values
-```
-
-### Day 15: Real Project Assignment
-
-**Project Work (Full Day)**
-
-You'll be assigned a real task from the backlog:
+**Steps**:
 
 1. Review Allure report
+2. Categorize failures (test issues, environment issues, product bugs)
+3. Create tickets for genuine bugs
+4. Identify flaky tests
+5. Document root causes
+6. Create improvement suggestions
 
-```bash
-git checkout -b feature/your-first-task
-```
+**Success Criteria**:
+- Accurate failure categorization
+- Clear bug reports
+- Actionable recommendations
 
-2. Understand requirements
-3. Plan your approach
-4. Implement with quality gates
-5. Create PR with proper documentation
-6. Get team review
+### Exercise 3: CI/CD Pipeline Enhancement
 
-**Success Criteria**
+**Objective**: Improve an aspect of the CI/CD pipeline
 
-- All quality gates pass
-- Code review approved
-- Documentation complete
-- Tests provide clear evidence
-- PR merged successfully
-
-## Week 4: Contribution & Mastery
-
-### Day 16-17: Platform Improvement
-
-**Learning (2 hours)**
-
-- Review [Platform Development](08-platform-development.md)
-- Understand contribution guidelines
-- Study improvement proposals
-
-**Exercise: Propose an Improvement**
-
-1. Identify something that could be better
-2. Create an ADR draft
-3. Discuss with team
-4. Implement if approved
-
-**ADR Template for Your Proposal**
-
-```markdown
-# ADR XXX: [Your Improvement Title]
-
-## Status
-Proposed
-
-## Context
-What problem are you solving?
-
-## Decision
-What do you propose?
-
-## Consequences
-What are the impacts?
-```
-
-### Day 18-19: Knowledge Sharing
-
-**Preparation (4 hours)**
-
-Prepare a presentation covering:
-
-1. Your onboarding journey
-2. Key learnings
-3. Challenges faced
-4. Suggestions for improvement
-5. Demo of your work
-
-**Presentation Structure**
-
-- Introduction (5 min)
-- Technical deep dive (15 min)
-- Demo (10 min)
-- Q&A (10 min)
-
-### Day 20: Assessment & Reflection
-
-**Assessment (2 hours)**
-
-Complete the onboarding assessment:
+**Steps**:
 
 1. Access Allure report
+2. Identify a pipeline improvement opportunity
+3. Research and propose solution
+4. Implement changes in a test environment
+5. Document the changes
+6. Get review and approval
+7. Deploy to production
 
-```bash
-npm run test:assessment
-```
-
-2. Build and review the report
-3. Submit your work
-
-**Reflection (2 hours)**
-
-Create a retrospective document:
-
-```markdown
-# Onboarding Retrospective
-
-## What Worked Well
-
-- Item 1
-- Item 2
-
-## What Could Be Better
-- Item 1
-- Item 2
-
-## Action Items for the Team
-- [ ] Improvement 1
-- [ ] Improvement 2
-
-## Personal Growth Areas
-- Area 1
-- Area 2
-```
-
-## Ongoing Learning
-
-### Monthly Activities
-
-- Review new ADRs
-- Participate in platform discussions
-- Share knowledge with new team members
-- Contribute to platform improvements
-
-### Quarterly Goals
-
-- Master advanced testing techniques
-- Contribute significant platform enhancement
-- Mentor new team members
-- Present at team meetings
+**Success Criteria**:
+- Measurable improvement
+- Properly documented
+- Approved by team lead
 
 ## Resources
 
-### Internal Documentation
+### Documentation
+- [Platform Architecture](./01-architecture-overview.md)
+- [Test Strategy](./02-test-strategy.md)
+- [CI/CD Setup](./03-cicd-setup.md)
+- [Development Workflow](./04-development-workflow.md)
 
-- [Platform Contract](06-platform-contract.md)
-- [Test Development Guide](04-test-development.md)
-- [Reporting Guide](05-evidence-and-reporting.md)
-- [All ADRs](adr/)
+### Tools Access
+- GitHub Organization: [Link to org]
+- Jenkins Dashboard: [Link to Jenkins]
+- Allure Reports: [Link to Allure]
+- Team Slack Channel: #qe-platform
 
-### External Resources
+### Key Contacts
+- Team Lead: [Name]
+- Buddy/Mentor: [Assigned on Day 1]
+- DevOps Contact: [Name]
+- Product Owner: [Name]
 
-- [Playwright Documentation](https://playwright.dev)
-- [Allure Framework](https://docs.qameta.io/allure/)
-- [GitHub Actions](https://docs.github.com/en/actions)
-- [Mermaid Diagrams](https://mermaid-js.github.io/)
+## Success Metrics
 
-## Getting Help
+### Week 1 Goals
+- Environment fully configured
+- First test merged to main
+- Understanding of basic platform architecture
+- Comfortable with local development workflow
 
-### Support Channels
+### Week 2 Goals
+- Independently created at least 3 tests
+- Completed all core exercises
+- Contributed to sprint work
+- Understanding of full CI/CD pipeline
 
-- Team Slack: `#qe-platform`
-- Office Hours: Daily 10-11 AM
-- Mentor: Assigned on Day 1
-- Documentation: This repository
+### 30-Day Goals
+- Regular contributor to test automation
+- Independently handling test-related stories
+- Participating in code reviews
+- Contributing to team knowledge base
 
-### Escalation Path
+### 90-Day Goals
+- Subject matter expert in at least one testing area
+- Mentoring newer team members
+- Contributing to platform improvements
+- Participating in architectural discussions
 
-1. Check documentation
-2. Ask your mentor
-3. Team Slack channel
-4. Team lead
-5. Platform maintainers
+## Feedback and Iteration
 
-## Success Indicators
+### Weekly Check-ins
+- 1:1 with team lead
+- Review progress against goals
+- Address blockers and questions
+- Adjust onboarding plan as needed
 
-You've successfully completed onboarding when you can:
+### End of Week 2 Retrospective
+- What worked well
+- What could be improved
+- Knowledge gaps identified
+- Action items for continued learning
 
-- [ ] Run quality gates independently
-- [ ] Create compliant test suites
-- [ ] Generate and interpret reports
-- [ ] Contribute to platform improvements
-- [ ] Help onboard others
-- [ ] Make decisions aligned with platform philosophy
+### 30-Day Review
 
-## Certification
+- Comprehensive skills assessment
+- Goal setting for next 60 days
+- Feedback on onboarding program
+- Identification of specialization interests
 
-Upon completion, you'll receive:
+## Appendix
 
-- Onboarding completion badge
-- Access to advanced platform features
-- Invitation to platform working group
-- Mentorship opportunities
+### Common Issues and Solutions
 
-## Feedback
+#### Issue: Local Tests Pass but Fail in CI
+**Possible Causes**:
+- Environment differences
+- Timing issues
+- Test data problems
 
-We continuously improve this playbook. Please submit feedback via:
+**Solutions**:
+- Review CI environment configuration
+- Add explicit waits
+- Improve test data isolation
 
-- PR to update this document
-- Issues in the repository
-- Direct feedback to platform team
+#### Issue: Cannot Access Test Reports
+**Solutions**:
+- Verify VPN connection
+- Check access permissions
+- Contact DevOps for support
 
----
+#### Issue: Slow Test Execution
+**Solutions**:
+- Review test parallelization settings
+- Check for unnecessary waits
+- Optimize test data setup
 
-**Welcome to the QE Platform team! We're excited to have you on this quality journey.**
+### Useful Commands
+
+```bash
+# Run all tests locally
+npm run test:all
+
+# Run specific test suite
+npm run test:suite -- --suite=api
+
+# Run tests with Allure report
+npm run test:allure
+
+# Debug mode
+npm run test:debug
+
+# Lint and format code
+npm run lint:fix
+```
+
+### Quick Reference Links
+- [Troubleshooting Guide](./troubleshooting.md)
+- [Code Review Checklist](./code-review-checklist.md)
+- [Testing Best Practices](./testing-best-practices.md)
+- [Platform FAQ](./faq.md)
