@@ -11,21 +11,25 @@ This document outlines practical AI use cases for Quality Engineering. Focus is 
 **Use Case**: Generate test cases from requirements or user stories
 
 **Implementation**:
+
 - Input: User story or requirement description
 - AI: Generates test scenarios and test steps
 - Output: Test cases ready for review and implementation
 
 **Benefits**:
+
 - Faster test case creation
 - More comprehensive coverage
 - Consistency in test design
 
 **Limitations**:
+
 - Requires human review
 - May need refinement
 - Context-specific knowledge needed
 
 **Example Workflow**:
+
 ```mermaid
 graph LR
     STORY[User Story] --> AI[AI Generator]
@@ -39,16 +43,19 @@ graph LR
 **Use Case**: Analyze flaky test failures to identify root causes
 
 **Implementation**:
+
 - Input: Test execution logs, screenshots, error messages
 - AI: Analyzes patterns, identifies common causes
 - Output: Root cause suggestions and fix recommendations
 
 **Benefits**:
+
 - Faster flaky test resolution
 - Pattern recognition across tests
 - Data-driven insights
 
 **Example**:
+
 - Analyzes 100 flaky test failures
 - Identifies: 60% are timing issues, 30% are test isolation
 - Recommends: Add explicit waits, improve test cleanup
@@ -58,16 +65,19 @@ graph LR
 **Use Case**: Automatically update tests when application changes
 
 **Implementation**:
+
 - Input: Application changes (code diff, UI changes)
 - AI: Identifies affected tests, suggests updates
 - Output: Updated test code or recommendations
 
 **Benefits**:
+
 - Reduced maintenance burden
 - Faster adaptation to changes
 - Consistency in updates
 
 **Limitations**:
+
 - Requires careful review
 - May not catch all impacts
 - Complex changes may need manual intervention
@@ -77,16 +87,19 @@ graph LR
 **Use Case**: Select relevant tests to run based on code changes
 
 **Implementation**:
+
 - Input: Code changes (files, functions modified)
 - AI: Analyzes impact, selects relevant tests
 - Output: Optimized test suite to run
 
 **Benefits**:
+
 - Faster feedback cycles
 - Reduced CI/CD execution time
 - Focused test execution
 
 **Example**:
+
 ```mermaid
 graph TB
     CHANGE[Code Change] --> ANALYZE[AI Analysis]
@@ -101,16 +114,19 @@ graph TB
 **Use Case**: Generate realistic test data for test execution
 
 **Implementation**:
+
 - Input: Data schema or requirements
 - AI: Generates realistic, varied test data
 - Output: Test data files or database records
 
 **Benefits**:
+
 - Faster test data creation
 - More realistic test scenarios
 - Better edge case coverage
 
 **Example**:
+
 - Generate user profiles with realistic names, emails, addresses
 - Generate payment data with valid card numbers (test mode)
 - Generate product catalogs with varied attributes
@@ -120,16 +136,19 @@ graph TB
 **Use Case**: Predict areas likely to have defects based on code and test metrics
 
 **Implementation**:
+
 - Input: Code complexity, test coverage, historical defects
 - AI: Analyzes patterns, predicts risk areas
 - Output: Risk assessment and recommendations
 
 **Benefits**:
+
 - Proactive quality focus
 - Better resource allocation
 - Early defect detection
 
 **Limitations**:
+
 - Predictions are probabilistic
 - Requires historical data
 - May have false positives
@@ -139,16 +158,19 @@ graph TB
 **Use Case**: Query test results and metrics using natural language
 
 **Implementation**:
+
 - Input: Natural language question
 - AI: Understands intent, queries test data
 - Output: Answer or visualization
 
 **Benefits**:
+
 - Easier access to test information
 - No need to learn query languages
 - Faster insights
 
 **Example Questions**:
+
 - "What tests failed in the last release?"
 - "Show me flaky tests from the past month"
 - "Which features have the lowest test coverage?"
@@ -165,6 +187,7 @@ graph TB
 - Pilot with one team
 
 **Deliverables**:
+
 - Test data collection system
 - Basic AI test generator
 - Pilot results and learnings
@@ -179,6 +202,7 @@ graph TB
 - Expand to all teams
 
 **Deliverables**:
+
 - Flaky test analysis tool
 - Intelligent test selection
 - Enhanced test generation
@@ -194,6 +218,7 @@ graph TB
 - Continuous improvement
 
 **Deliverables**:
+
 - Defect prediction model
 - Natural language interface
 - Automated test maintenance
@@ -319,4 +344,3 @@ Track the following metrics:
 - Review [Test Strategy Standards](05-test-strategy-standards.md) for test creation guidelines
 - See [Flaky Tests Policy](06-flaky-tests-policy.md) for flaky test management
 - Check [Observability](08-observability.md) for quality metrics
-

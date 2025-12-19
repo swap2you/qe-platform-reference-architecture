@@ -148,4 +148,3 @@ If a repository is non-compliant:
 ## Questions
 
 For questions about compliance, create an issue using the `contract-change.yml` template.
-

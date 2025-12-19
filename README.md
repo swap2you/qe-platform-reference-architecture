@@ -92,11 +92,13 @@ Each repository will reference this architecture and implement the standards, qu
 This repository defines a **strict, enforceable contract** that all implementing repositories MUST follow.
 
 **Quick Links**:
+
 - [`CONTRACT.md`](CONTRACT.md) - Full contract definition (REQUIRED reading)
 - [`docs/11-platform-contract-compliance.md`](docs/11-platform-contract-compliance.md) - Compliance checklist
 - [`docs/12-repo-audit-guide.md`](docs/12-repo-audit-guide.md) - Audit procedure
 
 **Contract Requirements**:
+
 - ✅ Required folder structure
 - ✅ Required CI gates (PR smoke tests, nightly regression)
 - ✅ Required tagging taxonomy
@@ -161,6 +163,7 @@ Follow these steps to implement the QE Platform Contract in your repository:
 ### Step 9: Reference This Contract
 
 Add to your repository `README.md`:
+
 ```markdown
 ## Platform Contract Compliance
 
@@ -179,6 +182,7 @@ This reference architecture defines the **contract** that your actual test autom
 - **All Repositories**: Generate Allure reports, follow naming conventions, implement quality gates
 
 Each repository will:
+
 - Reference this architecture in their README
 - Implement the quality gates defined here
 - Follow the governance standards
@@ -189,16 +193,20 @@ See [`docs/02-repo-ecosystem-map.md`](docs/02-repo-ecosystem-map.md) for detaile
 
 ## 3-Minute Interview Demo Script
 
-**Opening (30 seconds)**
+### Opening (30 seconds)
+
 > "This repository is a reference architecture for Quality Engineering platforms. It's documentation-first, meaning it defines the standards, workflows, and governance that our test automation repositories implement. Think of it as the blueprint for how we do quality engineering at scale."
 
-**Platform Overview (60 seconds)**
+### Platform Overview (60 seconds)
+
 > "The architecture covers six key areas: test automation across UI, API, and performance; CI/CD quality gates that block bad releases; governance standards for consistency; reporting with Allure for evidence; observability for quality trends; and AI-assisted QE for efficiency. Each component is documented with Mermaid diagrams showing workflows and decision trees."
 
-**Practical Value (60 seconds)**
+### Practical Value (60 seconds)
+
 > "The real value is in the quality gates and release workflows. We define exactly when tests run—smoke tests on every PR, regression before release, performance benchmarks as gates. The release readiness decision flow shows how we make go/no-go decisions. There's also a 2-hour onboarding playbook for new teams, and governance standards that prevent technical debt."
 
-**Closing (30 seconds)**
+### Closing (30 seconds)
+
 > "This is public-safe and generic—no proprietary information. It's designed to be shared with stakeholders, used in interviews, and adapted by other organizations. The GitHub Actions workflows ensure documentation quality, and the issue templates help maintain the backlog."
 
 ## Documentation Index
@@ -226,6 +234,7 @@ See [`docs/issues-backlog.md`](docs/issues-backlog.md) for the starter backlog o
 ## Contributing
 
 This repository follows a documentation-first approach. Contributions should:
+
 - Maintain public-safe, generic content
 - Include Mermaid diagrams where workflows are described
 - Follow the existing documentation structure
@@ -251,4 +260,3 @@ For security concerns, please see [`SECURITY.md`](SECURITY.md).
 ---
 
 **Status**: Active reference architecture | **Last Updated**: 2025-12-14 | **Maintainer**: QE Platform Team
-

@@ -252,4 +252,3 @@ graph TB
     style B fill:#87CEEB
     style C fill:#FFB6C1
 ```
-

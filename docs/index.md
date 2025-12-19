@@ -53,7 +53,7 @@ Welcome to the QE Platform Reference Architecture documentation. This index prov
 
 ## Documentation Structure
 
-```
+```text
 docs/
 ├── index.md                          # This file
 ├── 01-platform-overview.md           # Platform architecture
@@ -88,4 +88,3 @@ docs/
 ## Contributing
 
 See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines on contributing to this documentation.
-

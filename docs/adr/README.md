@@ -5,6 +5,7 @@ This directory contains Architecture Decision Records (ADRs) for the QE Platform
 ## What are ADRs?
 
 ADRs document important architectural decisions, including:
+
 - **Context**: Why the decision was needed
 - **Decision**: What was decided
 - **Options Considered**: Alternatives that were evaluated
@@ -62,4 +63,3 @@ Each ADR follows this structure:
 
 - [ADR GitHub Template](https://github.com/joelparkerhenderson/architecture-decision-record)
 - [Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
-
