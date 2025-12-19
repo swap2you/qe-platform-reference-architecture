@@ -5,6 +5,7 @@ This guide provides a step-by-step procedure for auditing a repository implement
 ## Audit Scope
 
 An audit verifies that a repository:
+
 - Implements required standards from [`CONTRACT.md`](../CONTRACT.md)
 - Follows governance policies
 - Generates required artifacts
@@ -230,7 +231,7 @@ After completing all phases, create an audit report:
 
 Use this template for each audit:
 
-```
+```text
 Repository: [name]
 Audit Date: [date]
 Auditor: [name]
@@ -252,4 +253,3 @@ Recommendations: [list]
 ## Questions
 
 For audit questions, create an issue using the `contract-change.yml` template.
-

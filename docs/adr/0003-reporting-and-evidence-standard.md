@@ -9,6 +9,7 @@ Accepted
 We need a standardized way to generate, store, and access test execution evidence. The challenge is ensuring traceability, accessibility, and consistency across multiple repositories and test types (UI, API, performance).
 
 Options considered:
+
 - Multiple reporting tools (one per test type)
 - Custom reporting solution
 - Allure as standard reporting tool
@@ -17,6 +18,7 @@ Options considered:
 ## Decision
 
 We will use **Allure TestOps/Reports as the standard** for all test execution evidence. Every test execution must generate an Allure evidence bundle containing:
+
 - Allure HTML report
 - Test execution summary (JSON/XML)
 - Artifacts (screenshots, logs, videos)
@@ -31,10 +33,12 @@ This standard applies to all test types (UI, API, performance) and all execution
 **Description**: Use different tools for different test types (e.g., Allure for UI, custom for API, JMeter reports for performance).
 
 **Pros**:
+
 - Tool optimized for each test type
 - Teams can choose best tool
 
 **Cons**:
+
 - Inconsistent evidence format
 - Hard to aggregate metrics
 - Multiple tools to learn
@@ -46,10 +50,12 @@ This standard applies to all test types (UI, API, performance) and all execution
 **Description**: Build custom reporting solution tailored to our needs.
 
 **Pros**:
+
 - Fully customized to requirements
 - Complete control
 
 **Cons**:
+
 - High development cost
 - Maintenance burden
 - May not have all features needed
@@ -61,6 +67,7 @@ This standard applies to all test types (UI, API, performance) and all execution
 **Description**: Use Allure TestOps/Reports for all test types and execution contexts.
 
 **Pros**:
+
 - Consistent evidence format
 - Rich features (history, trends, attachments)
 - Supports UI, API, and performance tests
@@ -68,6 +75,7 @@ This standard applies to all test types (UI, API, performance) and all execution
 - Good integration with CI/CD
 
 **Cons**:
+
 - May not be perfect for all test types
 - Requires setup and configuration
 - Learning curve for teams
@@ -79,10 +87,12 @@ This standard applies to all test types (UI, API, performance) and all execution
 **Description**: Let each repository choose its own reporting tool.
 
 **Pros**:
+
 - Maximum flexibility
 - Teams choose what works best
 
 **Cons**:
+
 - No consistency
 - Hard to aggregate metrics
 - Difficult to audit compliance
@@ -123,4 +133,3 @@ This standard applies to all test types (UI, API, performance) and all execution
 - [CONTRACT.md](../../CONTRACT.md) - Section 4: Required Reporting Standard
 - [docs/07-reporting-and-evidence.md](../07-reporting-and-evidence.md) - Reporting standards
 - [docs/12-repo-audit-guide.md](../12-repo-audit-guide.md) - Audit procedure for artifacts
-

@@ -9,6 +9,7 @@ Accepted
 We need a way to define and communicate QE platform standards across multiple test automation repositories. The challenge is ensuring consistency, enforceability, and clarity without creating a monolithic codebase.
 
 Options considered:
+
 - Code templates in a shared repository
 - Wiki documentation
 - Separate documentation repository
@@ -17,6 +18,7 @@ Options considered:
 ## Decision
 
 We will use a **documentation-first reference architecture** approach where:
+
 - This repository contains only documentation (no test code)
 - Documentation defines explicit contracts and standards
 - Implementing repositories reference and comply with these standards
@@ -29,10 +31,12 @@ We will use a **documentation-first reference architecture** approach where:
 **Description**: Create a repository with code templates that teams copy.
 
 **Pros**:
+
 - Teams get working code immediately
 - Less interpretation needed
 
 **Cons**:
+
 - Hard to maintain across multiple repos
 - Version drift between repos
 - Doesn't scale well
@@ -44,10 +48,12 @@ We will use a **documentation-first reference architecture** approach where:
 **Description**: Use GitHub Wiki or similar for documentation.
 
 **Pros**:
+
 - Easy to edit
 - Version control through Git
 
 **Cons**:
+
 - Hard to enforce standards
 - No clear contract definition
 - Difficult to audit compliance
@@ -59,10 +65,12 @@ We will use a **documentation-first reference architecture** approach where:
 **Description**: Create a dedicated docs repo with standards.
 
 **Pros**:
+
 - Clear separation of concerns
 - Can be versioned independently
 
 **Cons**:
+
 - May become disconnected from implementation
 - Harder to discover
 
@@ -73,6 +81,7 @@ We will use a **documentation-first reference architecture** approach where:
 **Description**: Single repository with comprehensive documentation defining contracts, standards, and governance.
 
 **Pros**:
+
 - Clear contract definition
 - Enforceable through audits
 - Scalable across many repos
@@ -80,6 +89,7 @@ We will use a **documentation-first reference architecture** approach where:
 - Can evolve independently
 
 **Cons**:
+
 - Requires discipline to maintain
 - Teams must interpret and implement
 
@@ -119,4 +129,3 @@ We will use a **documentation-first reference architecture** approach where:
 - [CONTRACT.md](../../CONTRACT.md) - Platform contract definition
 - [docs/11-platform-contract-compliance.md](../11-platform-contract-compliance.md) - Compliance checklist
 - [docs/12-repo-audit-guide.md](../12-repo-audit-guide.md) - Audit procedure
-

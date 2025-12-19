@@ -9,6 +9,7 @@ Accepted
 We need to define when different test suites run in the CI/CD pipeline. The challenge is balancing speed (fast feedback) with coverage (comprehensive testing) while preventing bad code from reaching production.
 
 Options considered:
+
 - Single test suite running on all events
 - Multiple test suites with different triggers
 - Test suite separation by type and trigger
@@ -16,6 +17,7 @@ Options considered:
 ## Decision
 
 We will implement **separated quality gates** with distinct test suites:
+
 - **PR Gate**: Smoke tests (fast, critical path) - blocks PR merge
 - **Nightly Gate**: Regression tests (comprehensive) - scheduled execution
 - **Release Gate**: Performance and security tests - before release
@@ -29,10 +31,12 @@ Each gate has distinct requirements, execution times, and failure handling.
 **Description**: Run all tests on every PR and nightly.
 
 **Pros**:
+
 - Simple to implement
 - Comprehensive coverage always
 
 **Cons**:
+
 - Slow feedback on PRs
 - Resource intensive
 - May block PRs unnecessarily
@@ -44,10 +48,12 @@ Each gate has distinct requirements, execution times, and failure handling.
 **Description**: Smoke tests on PR, full suite nightly.
 
 **Pros**:
+
 - Fast PR feedback
 - Comprehensive nightly coverage
 
 **Cons**:
+
 - May miss issues between PR and nightly
 - No release-specific gates
 
@@ -56,17 +62,20 @@ Each gate has distinct requirements, execution times, and failure handling.
 ### Option 3: Separated Quality Gates (Chosen)
 
 **Description**: Three distinct gates:
+
 - PR: Smoke tests (< 10 min, blocking)
 - Nightly: Regression tests (< 60 min, non-blocking)
 - Release: Performance + security (blocking)
 
 **Pros**:
+
 - Fast PR feedback
 - Comprehensive nightly coverage
 - Release-specific validation
 - Clear separation of concerns
 
 **Cons**:
+
 - More complex to set up
 - Requires discipline to maintain
 
@@ -105,4 +114,3 @@ Each gate has distinct requirements, execution times, and failure handling.
 - [CONTRACT.md](../../CONTRACT.md) - Section 2: Required CI/CD Quality Gates
 - [docs/03-quality-gates.md](../03-quality-gates.md) - Quality gate definitions
 - [docs/04-release-workflows.md](../04-release-workflows.md) - Release workflows
-

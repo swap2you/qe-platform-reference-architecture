@@ -9,6 +9,7 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ### Day 1: Environment Setup & Platform Overview
 
 #### Morning: Welcome & Setup
+
 - Team introductions and role overview
 - Development environment setup
   - Install required tools (Node.js, Docker, Git)
@@ -17,6 +18,7 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
   - Set up access to required services (GitHub, Jenkins, Allure)
 
 #### Afternoon: Platform Architecture
+
 - Review platform architecture documentation
 - Understand the test pyramid strategy
 - Overview of CI/CD pipeline
@@ -27,12 +29,14 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ### Day 2: First Test Contribution
 
 #### Morning: Test Framework Deep Dive
+
 - Study existing test patterns
 - Review coding standards and best practices
 - Understand the Page Object Model implementation
 - Learn about test data management
 
 #### Afternoon: Write First Test
+
 - Pair programming session with a buddy
 - Create a simple UI test for an existing feature
 - Practice local test execution
@@ -43,12 +47,14 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ### Day 3: API Testing & Contract Testing
 
 #### Morning: API Testing Fundamentals
+
 - Review API testing framework
 - Understand REST API test patterns
 - Study authentication and authorization testing
 - Learn about test data setup for APIs
 
 #### Afternoon: Contract Testing
+
 - Introduction to contract testing concepts
 - Review existing contract tests
 - Understand provider and consumer testing
@@ -59,12 +65,14 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ### Day 4: CI/CD Pipeline Integration
 
 #### Morning: Jenkins Pipeline Overview
+
 - Understand the Jenkins pipeline structure
 - Review pipeline stages and their purposes
 - Learn about pipeline triggers and schedules
 - Study artifact management and test result publishing
 
 #### Afternoon: Pipeline Troubleshooting
+
 - Learn how to debug pipeline failures
 - Practice accessing and analyzing Jenkins logs
 - Understand common pipeline issues and solutions
@@ -75,6 +83,7 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ### Day 5: Test Reporting & Allure
 
 #### Morning: Allure Reporting
+
 - Navigate the Allure test report interface
 - Understand test categorization and tagging
 - Learn about test history and trends
@@ -94,12 +103,14 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ### Day 6: Performance Testing Basics
 
 #### Morning: Performance Testing Introduction
+
 - Overview of performance testing strategy
 - Review existing performance test suite
 - Understand key performance metrics
 - Learn about load testing tools and frameworks
 
 #### Afternoon: Create Performance Test
+
 - Write a simple load test
 - Execute performance tests locally
 - Analyze performance test results
@@ -110,12 +121,14 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ### Day 7: Visual Testing & Accessibility
 
 #### Morning: Visual Regression Testing
+
 - Introduction to visual testing concepts
 - Review visual testing tools integration
 - Understand baseline management
 - Learn about visual diff analysis
 
 #### Afternoon: Accessibility Testing
+
 - Overview of accessibility standards (WCAG)
 - Review accessibility testing tools
 - Practice automated accessibility testing
@@ -126,12 +139,14 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ### Day 8: Test Data Management
 
 #### Morning: Test Data Strategy
+
 - Understand test data requirements
 - Review test data generation approaches
 - Learn about test data cleanup strategies
 - Study database seeding and fixtures
 
 #### Afternoon: Implement Test Data
+
 - Create test data builders
 - Implement data cleanup automation
 - Practice test isolation techniques
@@ -142,12 +157,14 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ### Day 9: Advanced Debugging & Troubleshooting
 
 #### Morning: Debugging Techniques
+
 - Advanced debugging in the IDE
 - Using browser developer tools
 - Network traffic analysis
 - Screenshot and video capture for failures
 
 #### Afternoon: Flaky Test Investigation
+
 - Understanding flaky tests
 - Techniques for reproducing flaky failures
 - Common causes and solutions
@@ -158,6 +175,7 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ### Day 10: Real Project Work
 
 #### Full Day: Sprint Work
+
 - Join daily standup
 - Pick up a real story from the backlog
 - Work independently with buddy support available
@@ -170,12 +188,14 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ### Ongoing Activities
 
 #### Regular Practices
+
 - Participate in sprint ceremonies
 - Contribute to test automation backlog
 - Rotate on-call responsibilities (after 4 weeks)
 - Attend team knowledge-sharing sessions
 
 #### Learning Path
+
 - Complete advanced training modules
 - Shadow experienced team members
 - Take on mentoring responsibilities for newer members
@@ -200,6 +220,7 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 9. Merge after approval
 
 **Success Criteria**:
+
 - Test passes consistently
 - Follows coding standards
 - Properly documented
@@ -219,6 +240,7 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 6. Create improvement suggestions
 
 **Success Criteria**:
+
 - Accurate failure categorization
 - Clear bug reports
 - Actionable recommendations
@@ -238,6 +260,7 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 7. Deploy to production
 
 **Success Criteria**:
+
 - Measurable improvement
 - Properly documented
 - Approved by team lead
@@ -245,18 +268,21 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ## Resources
 
 ### Documentation
+
 - [Platform Architecture](./01-architecture-overview.md)
 - [Test Strategy](./02-test-strategy.md)
 - [CI/CD Setup](./03-cicd-setup.md)
 - [Development Workflow](./04-development-workflow.md)
 
 ### Tools Access
+
 - GitHub Organization: [Link to org]
 - Jenkins Dashboard: [Link to Jenkins]
 - Allure Reports: [Link to Allure]
 - Team Slack Channel: #qe-platform
 
 ### Key Contacts
+
 - Team Lead: [Name]
 - Buddy/Mentor: [Assigned on Day 1]
 - DevOps Contact: [Name]
@@ -265,24 +291,28 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ## Success Metrics
 
 ### Week 1 Goals
+
 - Environment fully configured
 - First test merged to main
 - Understanding of basic platform architecture
 - Comfortable with local development workflow
 
 ### Week 2 Goals
+
 - Independently created at least 3 tests
 - Completed all core exercises
 - Contributed to sprint work
 - Understanding of full CI/CD pipeline
 
 ### 30-Day Goals
+
 - Regular contributor to test automation
 - Independently handling test-related stories
 - Participating in code reviews
 - Contributing to team knowledge base
 
 ### 90-Day Goals
+
 - Subject matter expert in at least one testing area
 - Mentoring newer team members
 - Contributing to platform improvements
@@ -291,12 +321,14 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ## Feedback and Iteration
 
 ### Weekly Check-ins
+
 - 1:1 with team lead
 - Review progress against goals
 - Address blockers and questions
 - Adjust onboarding plan as needed
 
 ### End of Week 2 Retrospective
+
 - What worked well
 - What could be improved
 - Knowledge gaps identified
@@ -314,24 +346,31 @@ This playbook provides a structured 2-week onboarding program for new QE enginee
 ### Common Issues and Solutions
 
 #### Issue: Local Tests Pass but Fail in CI
+
 **Possible Causes**:
+
 - Environment differences
 - Timing issues
 - Test data problems
 
 **Solutions**:
+
 - Review CI environment configuration
 - Add explicit waits
 - Improve test data isolation
 
 #### Issue: Cannot Access Test Reports
+
 **Solutions**:
+
 - Verify VPN connection
 - Check access permissions
 - Contact DevOps for support
 
 #### Issue: Slow Test Execution
+
 **Solutions**:
+
 - Review test parallelization settings
 - Check for unnecessary waits
 - Optimize test data setup
@@ -356,6 +395,7 @@ npm run lint:fix
 ```
 
 ### Quick Reference Links
+
 - [Troubleshooting Guide](./troubleshooting.md)
 - [Code Review Checklist](./code-review-checklist.md)
 - [Testing Best Practices](./testing-best-practices.md)

@@ -3,6 +3,7 @@
 ## Supported Versions
 
 This is a documentation repository. Security concerns relate to:
+
 - Documentation accuracy regarding security testing practices
 - Secure handling of any example code or configurations
 - Link validation to prevent malicious redirects
@@ -16,6 +17,7 @@ If you discover a security vulnerability in this documentation or have concerns 
 3. Or create a private security advisory through GitHub
 
 Please include:
+
 - Description of the vulnerability or concern
 - Steps to reproduce (if applicable)
 - Suggested fix (if you have one)
@@ -33,6 +35,7 @@ This repository documents security testing practices as part of the QE platform.
 ## Best Practices
 
 When contributing documentation that includes:
+
 - **Example credentials**: Use placeholder values (e.g., `your-api-key`, `your-secret`)
 - **Configuration examples**: Sanitize any real configurations
 - **URLs**: Use example domains (e.g., `example.com`, `your-service.com`)
@@ -41,9 +44,9 @@ When contributing documentation that includes:
 ## Security Updates
 
 Security-related documentation updates will be:
+
 - Reviewed by security-conscious maintainers
 - Documented in CHANGELOG.md
 - Communicated through repository releases
 
 Thank you for helping keep this repository secure!
-
