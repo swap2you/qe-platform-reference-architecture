@@ -7,6 +7,7 @@ Flaky tests are tests that produce inconsistent results—passing and failing fo
 ## Flaky Test Definition
 
 A test is considered flaky if it:
+
 - Passes and fails intermittently for the same code
 - Has inconsistent results across multiple runs
 - Fails due to timing, race conditions, or external dependencies
@@ -32,11 +33,13 @@ graph TB
 ### 1. Timing Issues
 
 **Causes**:
+
 - Insufficient wait times
 - Race conditions
 - Async operations not awaited
 
 **Examples**:
+
 - Element not found (page still loading)
 - API response not received
 - Database transaction not committed
@@ -44,11 +47,13 @@ graph TB
 ### 2. Test Isolation Issues
 
 **Causes**:
+
 - Shared test data
 - State leakage between tests
 - Incomplete cleanup
 
 **Examples**:
+
 - Test fails when run after another test
 - Data conflicts between tests
 - Environment state not reset
@@ -56,11 +61,13 @@ graph TB
 ### 3. External Dependencies
 
 **Causes**:
+
 - Third-party services unavailable
 - Network issues
 - Environment inconsistencies
 
 **Examples**:
+
 - External API timeouts
 - Database connection failures
 - File system permissions
@@ -68,11 +75,13 @@ graph TB
 ### 4. Environment Issues
 
 **Causes**:
+
 - Browser/OS differences
 - Resource constraints
 - Configuration drift
 
 **Examples**:
+
 - Browser-specific behavior
 - Memory limitations
 - Missing environment variables
@@ -110,6 +119,7 @@ graph LR
 ```
 
 **Thresholds**:
+
 - **Stable**: Pass rate ≥ 95%
 - **Flaky**: Pass rate < 95%
 - **Critical Flaky**: Pass rate < 80%
@@ -183,21 +193,25 @@ graph TB
 ### Common Fixes
 
 **Timing Issues**:
+
 - Use explicit waits instead of fixed delays
 - Wait for specific conditions
 - Handle async operations properly
 
 **Isolation Issues**:
+
 - Ensure test data isolation
 - Clean up after each test
 - Reset environment state
 
 **External Dependencies**:
+
 - Mock external services
 - Use test doubles
 - Implement retry logic (with caution)
 
 **Environment Issues**:
+
 - Standardize test environments
 - Use containerization
 - Validate environment setup
@@ -297,4 +311,3 @@ Maintain a dashboard showing:
 - Review [Test Strategy Standards](05-test-strategy-standards.md) for test design best practices
 - See [Quality Gates](03-quality-gates.md) for flaky test thresholds
 - Check [Observability](08-observability.md) for monitoring flaky tests
-

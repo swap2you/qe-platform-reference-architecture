@@ -21,6 +21,7 @@ graph TB
 ```
 
 **Distribution**:
+
 - **Unit Tests**: 70% - Fast, isolated, developer-written
 - **Integration Tests**: 20% - API contracts, service integration
 - **E2E Tests**: 10% - Critical user journeys, release validation
@@ -58,6 +59,7 @@ graph TB
 **Format**: `{Feature}Test` or `{Feature}{Type}Test`
 
 **Examples**:
+
 - `LoginTest.java`
 - `UserRegistrationTest.java`
 - `PaymentAPITest.java`
@@ -68,6 +70,7 @@ graph TB
 **Format**: `test{Scenario}` or `should{ExpectedBehavior}When{Condition}`
 
 **Examples**:
+
 - `testUserCanLoginWithValidCredentials()`
 - `shouldReturnErrorWhenInvalidCredentialsProvided()`
 - `testPaymentProcessingWithValidCard()`
@@ -77,6 +80,7 @@ graph TB
 **Format**: `{feature-name}.feature`
 
 **Examples**:
+
 - `user-login.feature`
 - `shopping-cart.feature`
 - `payment-processing.feature`
@@ -86,6 +90,7 @@ graph TB
 **Format**: Descriptive scenario titles
 
 **Examples**:
+
 - `User can login with valid credentials`
 - `User cannot login with invalid password`
 - `User is locked out after 3 failed attempts`
@@ -151,6 +156,7 @@ Feature: User Login
 **Format**: `{type}/{description}`
 
 **Types**:
+
 - `feature/` - New features or test scenarios
 - `bugfix/` - Bug fixes
 - `hotfix/` - Emergency fixes
@@ -158,6 +164,7 @@ Feature: User Login
 - `docs/` - Documentation updates
 
 **Examples**:
+
 - `feature/add-payment-tests`
 - `bugfix/fix-flaky-login-test`
 - `hotfix/fix-test-timeout`
@@ -178,6 +185,7 @@ graph LR
 ```
 
 **Rules**:
+
 - All changes must go through Pull Requests
 - `main` branch is always deployable
 - Feature branches are deleted after merge
@@ -230,7 +238,7 @@ Closes #123
 
 ### Directory Structure
 
-```
+```text
 src/
 └── test/
     ├── java/
@@ -257,7 +265,8 @@ src/
 ### Page Object Model (UI Tests)
 
 **Structure**:
-```
+
+```text
 pages/
 ├── BasePage.java
 ├── LoginPage.java
@@ -266,6 +275,7 @@ pages/
 ```
 
 **Pattern**:
+
 - One page object per page/screen
 - Methods return page objects for chaining
 - Locators defined as constants
@@ -285,6 +295,7 @@ pages/
 **Format**: `{feature}-{purpose}.json`
 
 **Examples**:
+
 - `user-valid-credentials.json`
 - `payment-valid-card.json`
 - `checkout-complete-flow.json`
@@ -327,4 +338,3 @@ All tests must generate:
 - Review [Flaky Tests Policy](06-flaky-tests-policy.md) for test reliability
 - See [Reporting and Evidence](07-reporting-and-evidence.md) for report standards
 - Check [Quality Gates](03-quality-gates.md) for gate requirements
-

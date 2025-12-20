@@ -11,6 +11,7 @@ This document defines the reporting standards and evidence requirements for all 
 Allure is the standard reporting tool for all test repositories.
 
 **Required Components**:
+
 - Test execution results
 - Test history and trends
 - Screenshots (UI tests)
@@ -98,13 +99,15 @@ Every report must include:
 ### UI Test Reports
 
 **Required Attachments**:
+
 - Screenshots on failure
 - Screenshots on key steps (configurable)
 - Browser console logs
 - Network logs (optional)
 
 **Example Structure**:
-```
+
+```text
 Allure Report
 ├── Test Results
 │   ├── Login Tests
@@ -120,13 +123,15 @@ Allure Report
 ### API Test Reports
 
 **Required Attachments**:
+
 - Request details (method, URL, headers, body)
 - Response details (status, headers, body)
 - Response time
 - Assertion results
 
 **Example Structure**:
-```
+
+```text
 Allure Report
 ├── Test Results
 │   ├── API Tests
@@ -145,13 +150,15 @@ Allure Report
 ### Performance Test Reports
 
 **Required Metrics**:
+
 - Response time (p50, p95, p99)
 - Throughput (requests per second)
 - Error rate
 - Resource utilization
 
 **Example Structure**:
-```
+
+```text
 Allure Report
 ├── Performance Results
 │   ├── Load Test: 100 users
@@ -181,6 +188,7 @@ graph TB
 ```
 
 **Retention Periods**:
+
 - **Allure Reports**: 90 days
 - **Screenshots**: 30 days
 - **Videos**: 7 days (only for failures)
@@ -336,4 +344,3 @@ Every release must include an evidence package:
 - Review [Release Workflows](04-release-workflows.md) for evidence requirements
 - See [Observability](08-observability.md) for quality metrics
 - Check [Quality Gates](03-quality-gates.md) for gate reporting
-
